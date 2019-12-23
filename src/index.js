@@ -5,17 +5,13 @@ import "./styles.css";
 
 import Paper from "./components/Paper";
 import Header from "./components/Header";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   return (
     <Paper>
       <Header />
-      <section className="add">
-        <form className="add-form">
-          <input className="add-input" type="text" />
-          <button className="add-btn main-black-color">Add</button>
-        </form>
-      </section>
+      <TodoForm />
 
       <section className="todos">
         <div className="todo">
