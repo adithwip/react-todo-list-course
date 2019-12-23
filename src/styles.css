@@ -38,7 +38,7 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.container {
+.paper {
   width: 600px;
   height: 800px;
   background-color: #f2eecb;
