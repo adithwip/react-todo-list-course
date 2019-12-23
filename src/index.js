@@ -14,10 +14,10 @@ function App() {
         </section>
 
         <section className="add">
-          <div className="add-form">
+          <form className="add-form">
             <input className="add-input" type="text" />
             <button className="add-btn main-black-color">Add</button>
-          </div>
+          </form>
         </section>
 
         <section className="todos">
