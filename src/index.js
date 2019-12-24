@@ -3,19 +3,10 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
-import Paper from "./components/Paper";
-import Header from "./components/Header";
-import TodoForm from "./components/TodoForm";
-import Todos from "./components/Todos";
+import TodoList from "./pages/TodoList";
 
 function App() {
-  return (
-    <Paper>
-      <Header />
-      <TodoForm />
-      <Todos />
-    </Paper>
-  );
+  return <TodoList />;
 }
 
 const rootElement = document.getElementById("root");
