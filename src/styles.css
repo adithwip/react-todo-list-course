@@ -38,6 +38,14 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
 .paper {
   width: 600px;
   height: 800px;
@@ -62,7 +70,7 @@ html {
 }
 
 .header-title {
-  flex: 1;
+  width: 52%;
   text-align: center;
 
   color: var(--main-black-color);
@@ -75,6 +83,7 @@ html {
   font-size: 1.8rem;
   font-family: "Bungee", sans-serif;
 
+  width: 24%;
   padding: 16px;
   cursor: pointer;
 
