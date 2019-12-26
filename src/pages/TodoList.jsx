@@ -28,11 +28,17 @@ const TodoList = () => {
     addedTodos[index].isCompleted = !addedTodos[index].isCompleted;
     setTodos(addedTodos);
   };
+
+  const clearTodos = () => setTodos([]);
   const showAddToggle = () => setShowAdd(!showAdd);
 
   return (
     <Paper>
-      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
+      <Header
+        showAddToggle={showAddToggle}
+        showAdd={showAdd}
+        clearTodos={clearTodos}
+      />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>

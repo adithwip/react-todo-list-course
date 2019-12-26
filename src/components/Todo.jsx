@@ -16,9 +16,9 @@ const Todo = ({ text, completeTodo, index, isCompleted }) => {
 
 Todo.propTypes = {
   text: PropTypes.string.isRequired,
-  isCompleted: PropTypes.bool.isRequired,
-  completeTodo: PropTypes.func.isRequired,
-  index: PropTypes.number.isRequired
+  isCompleted: PropTypes.bool,
+  completeTodo: PropTypes.func,
+  index: PropTypes.number
 };
 
 export default Todo;
