@@ -21,7 +21,7 @@ const TodoList = () => {
 
   const completeTodo = index => {
     const addedTodos = [...todos];
-    addedTodos[index].isCompleted = true;
+    addedTodos[index].isCompleted = !addedTodos[index].isCompleted;
     setTodos(addedTodos);
   };
   const showAddToggle = () => setShowAdd(!showAdd);
