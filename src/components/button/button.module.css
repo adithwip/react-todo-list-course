@@ -1,20 +1,25 @@
-.main-red-color {
+.mainRedColor {
   color: var(--main-red-color);
 }
 
-.main-black-color {
+.mainBlackColor {
   color: var(--main-black-color);
 }
 
-.align-left {
+.alignLeft {
   text-align: left;
 }
 
-.align-right {
+.alignRight {
   text-align: right;
 }
 
-.header-btn {
+.greenText {
+  color: green;
+  background: none;
+}
+
+.headerBtn {
   font-size: 1.8rem;
   font-family: "Bungee", sans-serif;
 
@@ -27,10 +32,10 @@
   outline: unset;
 }
 
-.header-btn.main-red-color:active {
+.headerBtn.mainRedColor:active {
   text-shadow: 1px 1px 2px var(--main-red-color);
 }
 
-.header-btn.main-black-color:active {
+.headerBtn.mainBlackColor:active {
   text-shadow: 1px 1px 2px var(--main-black-color);
 }
