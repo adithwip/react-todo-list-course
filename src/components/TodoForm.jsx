@@ -12,6 +12,12 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return; // to stop JS to execute next line of code
     }
 
+    if (value.length > 40) {
+      alert("Please create a shorter todo text!");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
