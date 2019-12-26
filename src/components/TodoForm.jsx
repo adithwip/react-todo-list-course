@@ -7,7 +7,10 @@ const TodoForm = ({ addTodo }) => {
   const handleFormSubmit = e => {
     e.preventDefault();
 
-    if (!value) alert("No blank Todo!");
+    if (!value) {
+      alert("No blank Todo!");
+      return; // to stop JS to execute next line of code
+    }
 
     addTodo(value);
     setValue("");
