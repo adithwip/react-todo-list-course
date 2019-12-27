@@ -1,16 +1,31 @@
 import { css } from "@emotion/core";
 
-export const button = ({ align }) => css`
-  font-size: 1.8rem;
-  font-family: "Bungee", sans-serif;
+export const button = ({ align, color }) => {
+  let textColor;
 
-  width: 24%;
-  padding: 16px;
-  cursor: pointer;
+  switch (color) {
+    case "black":
+      textColor = "#484848";
+      break;
+    case "red":
+      textColor = "#e06262";
+      break;
+    default:
+      textColor = "black";
+  }
 
-  background: unset;
-  border: unset;
-  outline: unset;
+  return css`
+    font-size: 1.8rem;
+    font-family: "Bungee", sans-serif;
+    text-align: ${align};
+    color: ${textColor};
 
-  text-align: ${align};
-`;
+    width: 24%;
+    padding: 16px;
+    cursor: pointer;
+
+    background: unset;
+    border: unset;
+    outline: unset;
+  `;
+};
