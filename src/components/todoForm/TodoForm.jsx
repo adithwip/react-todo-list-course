@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
+import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "./TodoForm.module.css";
+// import styles from "./TodoForm.module.css";
+import * as styles from "./TodoForm.styles";
 
 const TodoForm = ({ addTodo, showAdd }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = React.useState("");
 
   const handleFormSubmit = e => {
     e.preventDefault();
@@ -26,15 +29,15 @@ const TodoForm = ({ addTodo, showAdd }) => {
 
   if (showAdd) {
     return (
-      <section className={styles.add}>
-        <form className={styles.addForm} onSubmit={handleFormSubmit}>
+      <section css={styles.add}>
+        <form css={styles.addForm} onSubmit={handleFormSubmit}>
           <input
-            className={styles.addInput}
+            css={styles.addInput}
             type="text"
             value={value}
             onChange={e => setValue(e.target.value)}
           />
-          <button className={styles.addBtn}>Add</button>
+          <button css={styles.addBtn}>Add</button>
         </form>
       </section>
     );
