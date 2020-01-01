@@ -3,7 +3,8 @@ import { jsx } from "@emotion/core";
 import { useTheme } from "emotion-theming";
 import PropTypes from "prop-types";
 
-import Button from "../button/Button";
+import Button from "../button/ButtonNoJSX";
+// import Button from "../button/Button";
 import Container from "../../layout/Container";
 import Item from "../../layout/Item";
 

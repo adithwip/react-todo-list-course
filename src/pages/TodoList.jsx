@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
-import Paper from "../components/paper/Paper";
-import Header from "../components/header/Header";
-import TodoForm from "../components/todoForm/TodoForm";
-import Todos from "../components/todos/Todos";
+// import Paper from "../components/paper/Paper";
+import Paper from "../components/paper/PaperNoJSX";
+// import Header from "../components/header/Header";
+import Header from "../components/header/HeaderNoJSX";
+// import TodoForm from "../components/todoForm/TodoForm";
+import TodoForm from "../components/todoForm/TodoFormNoJSX";
+// import Todos from "../components/todos/Todos";
+import Todos from "../components/todos/TodosNoJSX";
 
 import Container from "../layout/Container";
-import Item from "../layout/Item";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
@@ -32,7 +35,14 @@ const TodoList = () => {
     setTodos(addedTodos);
   };
 
-  const clearTodos = () => !showAdd && setTodos([]);
+  // const clearTodos = () => !showAdd && setTodos([]);
+  const clearTodos = () => {
+    if (showAdd) {
+      alert("Finish add todo before clear");
+      return;
+    }
+    setTodos([]);
+  };
   const showAddToggle = () => setShowAdd(!showAdd);
 
   return (

@@ -2,7 +2,8 @@
 import { jsx } from "@emotion/core";
 import PropTypes from "prop-types";
 
-import Todo from "../todo/Todo";
+// import Todo from "../todo/Todo";
+import Todo from "../todo/TodoNoJSX";
 import Container from "../../layout/Container";
 
 // import styles from "./Todos.module.css";
