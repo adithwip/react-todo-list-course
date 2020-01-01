@@ -1,26 +1,13 @@
 import { css } from "@emotion/core";
 
-// export const add = () =>
-//   css`
-//     padding: 16px;
-//   `;
-
-// export const addForm = () =>
-//   css`
-//     display: flex;
-//     align-items: flex-start;
-//   `;
-
-export const addInput = () =>
+export const addInput = ({ theme }) =>
   css`
     background: unset;
     border: unset;
     padding: 0 64px;
     width: 100%;
 
-    /* flex: 1; */
-
-    border-bottom: 1px solid var(--main-red-color);
+    border-bottom: 1px solid ${theme.color.primary.red};
     outline: unset;
 
     font-family: "Homemade Apple", sans-serif;
@@ -28,7 +15,7 @@ export const addInput = () =>
     text-transform: lowercase;
   `;
 
-export const addBtn = () =>
+export const addBtn = ({ theme }) =>
   css`
     font-size: 1.8rem;
     font-family: "Bungee", sans-serif;
@@ -42,6 +29,6 @@ export const addBtn = () =>
     outline: unset;
 
     &:active {
-      text-shadow: 1px 1px 2px var(--main-black-color);
+      text-shadow: 1px 1px 2px ${theme.color.primary.black};
     }
   `;

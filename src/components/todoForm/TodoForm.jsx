@@ -1,6 +1,7 @@
+import React from "react";
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React from "react";
+import { useTheme } from "emotion-theming";
 import PropTypes from "prop-types";
 
 import Button from "../button/Button";
@@ -12,6 +13,7 @@ import * as styles from "./TodoForm.styles";
 
 const TodoForm = ({ addTodo, showAdd }) => {
   const [value, setValue] = React.useState("");
+  const theme = useTheme();
 
   const handleFormSubmit = e => {
     e.preventDefault();
@@ -38,10 +40,10 @@ const TodoForm = ({ addTodo, showAdd }) => {
           <Container alignItems="flex-start">
             <Item flex={1} padding="0 0 0 16px">
               <input
-                css={styles.addInput}
+                css={styles.addInput({ theme })}
                 type="text"
                 value={value}
-                onChange={e => setValue(e.target.value)}
+                onChange={e => setValue(e.target.value({ theme }))}
               />
             </Item>
             {/* <button css={styles.addBtn}>Add</button> */}
