@@ -43,10 +43,9 @@ const TodoForm = ({ addTodo, showAdd }) => {
                 css={styles.addInput({ theme })}
                 type="text"
                 value={value}
-                onChange={e => setValue(e.target.value({ theme }))}
+                onChange={e => setValue(e.target.value)}
               />
             </Item>
-            {/* <button css={styles.addBtn}>Add</button> */}
             <Item>
               <Button text="Add" color="black" />
             </Item>
