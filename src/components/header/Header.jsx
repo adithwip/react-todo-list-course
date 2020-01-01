@@ -22,7 +22,7 @@ const Header = ({ showAddToggle, showAdd, clearTodos }) => {
         <Item flex={2}>
           <h1 css={styles.headerTitle(theme)}>Todo Lists</h1>
         </Item>
-        <Item flex={1}>
+        <Item flex={1} align="right">
           <Button text="Clear" onClick={clearTodos} color="red" align="right" />
         </Item>
       </Container>
