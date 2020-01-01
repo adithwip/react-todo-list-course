@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 // import Paper from "../components/paper/Paper";
 import Paper from "../components/paper/PaperNoJSX";
-// import Header from "../components/header/Header";
-import Header from "../components/header/HeaderNoJSX";
+import Header from "../components/header/Header";
+// import Header from "../components/header/HeaderNoJSX";
 // import TodoForm from "../components/todoForm/TodoForm";
 import TodoForm from "../components/todoForm/TodoFormNoJSX";
 // import Todos from "../components/todos/Todos";
