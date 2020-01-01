@@ -31,8 +31,7 @@ const TodoForm = ({ addTodo, showAdd }) => {
     setValue("");
   };
 
-  // if (showAdd) {
-  if (true) {
+  if (showAdd) {
     return (
       <section className="todoform-component">
         <form onSubmit={handleFormSubmit}>
