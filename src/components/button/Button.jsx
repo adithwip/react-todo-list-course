@@ -44,7 +44,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.string,
+  color: PropTypes.oneOf(["black", "red"]),
   align: PropTypes.oneOf(["left", "right"]),
   onClick: PropTypes.func
 };

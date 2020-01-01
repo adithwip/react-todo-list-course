@@ -3,6 +3,8 @@ import { jsx } from "@emotion/core";
 import React from "react";
 import PropTypes from "prop-types";
 
+import Button from "../button/Button";
+
 // import styles from "./TodoForm.module.css";
 import * as styles from "./TodoForm.styles";
 
@@ -27,7 +29,8 @@ const TodoForm = ({ addTodo, showAdd }) => {
     setValue("");
   };
 
-  if (showAdd) {
+  // if (showAdd) {
+  if (true) {
     return (
       <section css={styles.add}>
         <form css={styles.addForm} onSubmit={handleFormSubmit}>
@@ -37,7 +40,8 @@ const TodoForm = ({ addTodo, showAdd }) => {
             value={value}
             onChange={e => setValue(e.target.value)}
           />
-          <button css={styles.addBtn}>Add</button>
+          {/* <button css={styles.addBtn}>Add</button> */}
+          <Button text="Add" color="black" />
         </form>
       </section>
     );
