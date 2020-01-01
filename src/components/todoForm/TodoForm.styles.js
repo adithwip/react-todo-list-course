@@ -1,23 +1,24 @@
 import { css } from "@emotion/core";
 
-export const add = () =>
-  css`
-    padding: 16px;
-  `;
+// export const add = () =>
+//   css`
+//     padding: 16px;
+//   `;
 
-export const addForm = () =>
-  css`
-    display: flex;
-    align-items: flex-start;
-  `;
+// export const addForm = () =>
+//   css`
+//     display: flex;
+//     align-items: flex-start;
+//   `;
 
 export const addInput = () =>
   css`
     background: unset;
     border: unset;
     padding: 0 64px;
+    width: 100%;
 
-    flex: 1;
+    /* flex: 1; */
 
     border-bottom: 1px solid var(--main-red-color);
     outline: unset;

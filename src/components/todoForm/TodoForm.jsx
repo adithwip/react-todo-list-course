@@ -4,6 +4,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Button from "../button/Button";
+import Container from "../../layout/Container";
+import Item from "../../layout/Item";
 
 // import styles from "./TodoForm.module.css";
 import * as styles from "./TodoForm.styles";
@@ -32,16 +34,22 @@ const TodoForm = ({ addTodo, showAdd }) => {
   // if (showAdd) {
   if (true) {
     return (
-      <section css={styles.add}>
-        <form css={styles.addForm} onSubmit={handleFormSubmit}>
-          <input
-            css={styles.addInput}
-            type="text"
-            value={value}
-            onChange={e => setValue(e.target.value)}
-          />
-          {/* <button css={styles.addBtn}>Add</button> */}
-          <Button text="Add" color="black" />
+      <section className="todoform-component">
+        <form onSubmit={handleFormSubmit}>
+          <Container alignItems="flex-start">
+            <Item flex={1} padding="0 0 0 16px">
+              <input
+                css={styles.addInput}
+                type="text"
+                value={value}
+                onChange={e => setValue(e.target.value)}
+              />
+            </Item>
+            {/* <button css={styles.addBtn}>Add</button> */}
+            <Item>
+              <Button text="Add" color="black" />
+            </Item>
+          </Container>
         </form>
       </section>
     );

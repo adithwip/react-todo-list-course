@@ -2,13 +2,14 @@
 import { jsx, css } from "@emotion/core";
 import PropTypes from "prop-types";
 
-const Item = ({ children, flex, align }) => {
+const Item = ({ children, flex, align, padding }) => {
   return (
     <div
       className="flex-item"
       css={css`
         flex: ${flex};
         text-align: ${align};
+        padding: ${padding};
       `}
     >
       {children}
@@ -17,7 +18,8 @@ const Item = ({ children, flex, align }) => {
 };
 
 Item.defaultProps = {
-  align: "left"
+  align: "left",
+  padding: "unset"
 };
 
 Item.propTypes = {
@@ -33,6 +35,7 @@ Item.propTypes = {
     "initial",
     "inherit"
   ]),
+  padding: PropTypes.string,
   flex: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
