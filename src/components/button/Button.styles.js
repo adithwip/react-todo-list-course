@@ -29,5 +29,9 @@ export const button = ({ align, color, theme }) => {
     background: unset;
     border: unset;
     outline: unset;
+
+    &:active {
+      text-shadow: 1px 1px 2px ${textColor};
+    }
   `;
 };

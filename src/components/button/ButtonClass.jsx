@@ -15,11 +15,15 @@ const StyledButton = styled.button`
   background: unset;
   border: unset;
   outline: unset;
+
+  &:active {
+    text-shadow: 1px 1px 2px ${props => props.color};
+  }
 `;
 
 class Button extends React.Component {
   render() {
-    const { text, color, align, theme } = this.props;
+    const { text, color, align, onClick, theme } = this.props;
     const {
       color: { primary }
     } = theme;
@@ -37,7 +41,7 @@ class Button extends React.Component {
     }
 
     return (
-      <StyledButton color={textColor} align={align}>
+      <StyledButton color={textColor} align={align} onClick={onClick}>
         {text}
       </StyledButton>
     );
@@ -53,7 +57,12 @@ class Button extends React.Component {
     text: PropTypes.string.isRequired,
     color: PropTypes.oneOf(["black", "red"]),
     align: PropTypes.oneOf(["left", "right"]),
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    theme: PropTypes.shape({
+      color: PropTypes.shape({
+        primary: PropTypes.objectOf(PropTypes.string)
+      })
+    })
   };
 }
 
