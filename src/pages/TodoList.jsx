@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 
-// import Paper from "../components/paper/Paper";
-// import Paper from "../components/paper/PaperNoJSX";
-import Paper from "../components/paper/PaperClass";
-// import Header from "../components/header/Header";
-import Header from "../components/header/HeaderClass";
-// import Header from "../components/header/HeaderNoJSX";
-// import TodoForm from "../components/todoForm/TodoForm";
-// import TodoForm from "../components/todoForm/TodoFormNoJSX";
-import TodoForm from "../components/todoForm/TodoFormClass";
-// import Todos from "../components/todos/Todos";
-import Todos from "../components/todos/TodosClass";
-// import Todos from "../components/todos/TodosNoJSX";
+import Paper from "../components/paper/Paper";
+import Header from "../components/header/Header";
+import TodoForm from "../components/todoForm/TodoForm";
+import Todos from "../components/todos/Todos";
 
 import Container from "../layout/Container";
 
