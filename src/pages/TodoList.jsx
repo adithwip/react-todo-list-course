@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+
+import useStateWithLocalStorage from "../hooks/useStateWithLocalStorage";
 
 import Paper from "../components/paper/Paper";
 import Header from "../components/header/Header";
@@ -14,14 +16,15 @@ const TodoList = () => {
   //   { text: "Learning styling in React!", isCompleted: false }
   // ]);
 
-  const [todos, setTodos] = useState(
-    JSON.parse(localStorage.getItem("todos")) || []
-  );
+  // const [todos, setTodos] = useState(
+  //   JSON.parse(localStorage.getItem("todos")) || []
+  // );
+  const [todos, setTodos] = useStateWithLocalStorage("todos");
   const [showAdd, setShowAdd] = useState(false);
 
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+  // useEffect(() => {
+  //   localStorage.setItem("todos", JSON.stringify(todos));
+  // }, [todos]);
 
   const addTodo = value => {
     if (todos.length < 10) {
