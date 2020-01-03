@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Paper from "../components/paper/Paper";
 import Header from "../components/header/Header";
@@ -8,16 +8,24 @@ import Todos from "../components/todos/Todos";
 import Container from "../layout/Container";
 
 const TodoList = () => {
-  const [todos, setTodos] = useState([
-    { text: "Learning React!", isCompleted: false },
-    { text: "Learning React Hooks!", isCompleted: false },
-    { text: "Learning styling in React!", isCompleted: false }
-  ]);
+  // const [todos, setTodos] = useState([
+  //   { text: "Learning React!", isCompleted: false },
+  //   { text: "Learning React Hooks!", isCompleted: false },
+  //   { text: "Learning styling in React!", isCompleted: false }
+  // ]);
+
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
   const [showAdd, setShowAdd] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = value => {
     if (todos.length < 10) {
-      const addedTodos = [...todos, { text: value }];
+      const addedTodos = [...todos, { text: value, isCompleted: false }];
 
       setTodos(addedTodos);
     } else {

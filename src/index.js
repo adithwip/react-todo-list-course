@@ -4,8 +4,8 @@ import { ThemeProvider } from "emotion-theming";
 
 import "./styles.css";
 
-// import TodoList from "./pages/TodoList";
-import TodoList from "./pages/TodoListClass";
+import TodoList from "./pages/TodoList";
+// import TodoList from "./pages/TodoListClass";
 
 const theme = {
   color: {
