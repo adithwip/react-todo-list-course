@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "emotion-theming";
 
 import "./styles.css";
 
 import TodoList from "./pages/TodoList";
+import About from "./pages/About";
 // import TodoList from "./pages/TodoListClass";
 
 const theme = {
@@ -19,7 +21,12 @@ const theme = {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <TodoList />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={TodoList} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }
